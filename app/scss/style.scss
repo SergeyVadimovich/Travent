@@ -1,0 +1,421 @@
+@import 'vars';
+@import 'reset';
+@import 'libs';
+@import 'fonts';
+@import 'global';
+
+// header
+.header{
+  background-color: $bg;
+  padding:40px 0 45px;
+  position:relative;
+  z-index:50;
+  &__inner{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+  }
+}
+.phone{
+  &__text{
+    display:block;
+    color:$accent;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__number{
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 25px;
+    letter-spacing: 1.6px;
+  }
+  &__btn{
+    height:25px;
+    vertical-align:middle;
+  }
+}
+.language{
+  display:flex;
+  &__list-item{
+    display:none;
+    position:relative;
+    padding:0 6px 0 35px;
+    &::before{
+      content:'';
+      position:absolute;
+      top:50%;
+      transform: translateY(-50%);
+      left:0;
+      width: 30px;
+      height:15px;
+      background-image: url('../images/icons/UA-icon.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+  &__list-item--checked{
+    display:block;
+  }
+  &__link--checked{
+    color:$accent;
+  }
+  &__link{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.menu{
+  &__list{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list-link--checked{
+    color:$accent;
+  }
+  &__list-item + .menu__list-item{  
+    margin-left: 35px;
+  }
+  &__list-link{
+    @extend %roboto-400;
+    text-transform: uppercase;
+    transition: color .3s;
+    &:hover{
+      color:$accent;
+    }
+  }
+  &__list-link--poppup{
+    padding-right:15px;
+    position:relative;
+    &::after{
+      content:'';
+      position:absolute;
+      width:11px;
+      height:7px;
+      top:50%;
+      right:0;
+      transform: translateY(-50%);
+      transition:all .3s;
+      background-image: url('../images/icons/arrow-dw-white.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    &:hover::after{
+      transition:all .3s;
+      background-image: url('../images/icons/arrow-dw-red.png');
+    }
+  }
+  &__list-btn{
+    @extend %btn;
+    width: 11px;
+    background-color: transparent;
+    background-image: url('../images/icons/arrow-dw-white.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+.search-btn{
+  @extend %btn;
+  background-color: transparent;
+  width:25px;
+  height: 20px;
+  background-image: url(../images/icons/search-icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+// end header
+// slider
+.slider{
+  &__item{
+    height:calc(100vh - 180px);
+    background-position: 0 25%;
+    background-size: cover;
+  }
+  &__container{
+    max-width:1200px;
+    widows: 100%;
+    margin:0 auto;
+    padding: 0 10px;
+  }
+  &__text-box{
+    width:45%;
+    margin:215px 0 auto auto;
+  }
+  &__subtitle{
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 60px;
+    letter-spacing: 2px;
+  }
+  &__title{
+    @extend %roboto-700;
+    font-size: 70px;
+    line-height: 80px;
+    letter-spacing: 1.6px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
+  &__link-btn{
+    text-transform: uppercase;
+    background-color: $accent;
+    border-radius: 5px;
+    padding:10px 30px;
+  }
+}
+.slick-dots{
+  display:flex;
+  justify-content:center;
+  margin-top:-20px;
+  button{
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+    border:none;
+    background-color: #333;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    margin:5px
+  }
+  .slick-active{
+    button{
+      background-color: $accent;
+    }
+  }
+}
+// end slider
+
+// info
+.info{
+  padding:40px 0 0;
+  &__inner{
+    display:flex;
+    justify-content:space-around;
+    align-items:baseline;
+    position:relative;
+    ::after{
+      content:'';
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      width:100%;
+      height: 1px;
+      background-color: $line;
+    }
+  }
+  &__item{
+    text-align: center;
+    max-width:250px;
+    margin-bottom: 70px;
+  }
+  &__item-icon{
+    margin: 0 auto;
+  }
+  &__item-title{
+    @extend %roboto-700;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 75px;
+  }
+}
+// end info
+
+// product
+.product{
+  padding:50px 0;
+  &_top{
+    margin-bottom: 54px;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width:320px;
+    min-height:400px;
+    padding:65px 40px;
+    width:100%;
+    background-size: auto;
+    background-position: center top;
+    text-align: center;
+    position:relative;
+    transition:all .3s;
+    &::before{
+      content:'';
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      background-color:$bg;
+      opacity:0.5;
+      transition:all .3s;
+    }
+    &:hover{
+      transition:all .3s;
+      .product__item-title{
+        opacity:0;
+        transition:all .3s;
+      }
+      .product__details{
+        transition:all 1s;
+        opacity:1;
+      }
+      &::before{
+        transition:all 1s;
+        opacity:0;
+      }
+    }
+  }
+  &__item-title{
+    font-size: 25px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    transition:all .3s;
+  }
+  &__details{
+    opacity:0;
+    transition:all .3s;
+  }
+  &__details-icon{
+    margin: 0 auto 30px;
+  }
+  &__details-title{
+    font-size: 19px;
+    line-height: 60px;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+  &__details-text{
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  &__details-link{
+    background-color: $accent;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding:10px 25px;
+    border-radius:5px;
+  }
+}
+// end product
+// clients
+.client{
+  padding:20px 0;
+  &__inner{
+    padding:80px 0;
+    position:relative;
+    &::before,
+    &::after{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:1px;
+      background-color: $line;
+    }
+    &::before{
+      top:0;
+    }
+    &::after{
+      bottom:0;
+    }
+  }
+  &__slider-item{
+    max-width:200px;
+    height:90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__slider-item--color{
+    &:hover{
+      background-image: url('../images/clients/elektronik-logo-color.png') !important;
+    }
+  }
+}
+// slick-clients
+.slick-slider{
+  padding-left:110px;
+}
+.slick-arrow{
+  font-size: 0;
+  line-height: 0;
+  border:none;
+  background-color:transparent;
+  width:13px;
+  height:25px;
+  @extend %pointer; 
+}
+.slick-prev{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left:-70px;
+  background-image: url('../images/icons/slider-arrow-prev.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slick-next{
+  position:absolute;
+  right:-70px;
+  top:50%;
+  transform: translateY(-50%);
+  background-image: url('../images/icons/slider-arrow-next.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+//end slick-clients
+// end clients
+
+// footer
+.footer{
+  padding:75px 0 70px;
+  &__logo-img{
+    margin: 0 auto 25px;
+  }
+  &__social{
+    text-align: center;;
+  }
+  &__social-icon{
+    display:inline;
+    margin:7px;
+  }
+  &__copy-text{
+    font-size: 14px;
+    line-height: 24px;
+    color:$line;
+  }
+  
+}
+.footer-menu{
+  margin-bottom: 13px;
+  &__list{
+    display:flex;
+    justify-content: space-around;
+  }
+  &__list-link{
+    text-transform: uppercase;
+    color:$line;
+    font-size: 14px;
+  }
+  &__list-link--checked{
+    color:$accent;
+  }
+}
+// end footer
+@import 'media';

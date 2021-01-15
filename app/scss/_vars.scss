@@ -1,0 +1,23 @@
+$default:#fff;
+$bg:#000;
+$accent:#db332a;
+$line:#4d4d4d;
+
+
+
+%pointer{
+  cursor:pointer;
+}
+
+%btn{
+  border:none;
+  cursor:pointer;
+}
+%roboto-400{
+  font-family:'Roboto-Regular';
+  font-weight:400;
+}
+%roboto-700{
+  font-family: 'Roboto-Bold';
+  font-weight: 700;
+}
