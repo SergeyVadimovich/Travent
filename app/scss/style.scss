@@ -4,144 +4,30 @@
 @import 'fonts';
 @import 'global';
 
-// header
-.header{
-  background-color: $bg;
-  padding:40px 0 45px;
-  position:relative;
-  z-index:50;
-  &__inner{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
 
-  }
-}
-.phone{
-  &__text{
-    display:block;
-    color:$accent;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  &__number{
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 25px;
-    letter-spacing: 1.6px;
-  }
-  &__btn{
-    height:25px;
-    vertical-align:middle;
-  }
-}
-.language{
-  display:flex;
-  &__list-item{
-    display:none;
-    position:relative;
-    padding:0 6px 0 35px;
-    &::before{
-      content:'';
-      position:absolute;
-      top:50%;
-      transform: translateY(-50%);
-      left:0;
-      width: 30px;
-      height:15px;
-      background-image: url('../images/icons/UA-icon.png');
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-  }
-  &__list-item--checked{
-    display:block;
-  }
-  &__link--checked{
-    color:$accent;
-  }
-  &__link{
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
-.menu{
-  &__list{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__list-link--checked{
-    color:$accent;
-  }
-  &__list-item + .menu__list-item{  
-    margin-left: 35px;
-  }
-  &__list-link{
-    @extend %roboto-400;
-    text-transform: uppercase;
-    transition: color .3s;
-    &:hover{
-      color:$accent;
-    }
-  }
-  &__list-link--poppup{
-    padding-right:15px;
-    position:relative;
-    &::after{
-      content:'';
-      position:absolute;
-      width:11px;
-      height:7px;
-      top:50%;
-      right:0;
-      transform: translateY(-50%);
-      transition:all .3s;
-      background-image: url('../images/icons/arrow-dw-white.png');
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-    &:hover::after{
-      transition:all .3s;
-      background-image: url('../images/icons/arrow-dw-red.png');
-    }
-  }
-  &__list-btn{
-    @extend %btn;
-    width: 11px;
-    background-color: transparent;
-    background-image: url('../images/icons/arrow-dw-white.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-}
-.search-btn{
-  @extend %btn;
-  background-color: transparent;
-  width:25px;
-  height: 20px;
-  background-image: url(../images/icons/search-icon.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-// end header
 // slider
 .slider{
+  &__inner{
+    margin-top:120px;
+    .slick-slider {
+      padding-left: 0;
+    }
+  }
   &__item{
-    height:calc(100vh - 180px);
+    min-height:900px;
     background-position: 0 25%;
     background-size: cover;
   }
   &__container{
     max-width:1200px;
-    widows: 100%;
+    width: 100%;
     margin:0 auto;
     padding: 0 10px;
   }
   &__text-box{
     width:45%;
-    margin:215px 0 auto auto;
+    margin: 120px 0 0 auto;
+    padding:5px;
   }
   &__subtitle{
     text-transform: uppercase;
@@ -161,16 +47,12 @@
     margin-bottom: 40px;
   }
   &__link-btn{
-    text-transform: uppercase;
-    background-color: $accent;
-    border-radius: 5px;
-    padding:10px 30px;
+    @extend %lk-btn;
   }
 }
 .slick-dots{
   display:flex;
   justify-content:center;
-  margin-top:-20px;
   button{
     padding: 0;
     margin: 0;
@@ -230,6 +112,36 @@
 // product
 .product{
   padding:50px 0;
+  position:relative;
+  z-index:1;
+  &::before{
+    content:'';
+    position:absolute;
+    z-index:-1;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    background-image: url('../images/product/bg-1.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &::after{
+    content:'';
+    position:absolute;
+    z-index:-1;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    background-image: url('../images/product/bg-2.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   &_top{
     margin-bottom: 54px;
   }
@@ -239,8 +151,9 @@
   }
   &__item{
     max-width:320px;
-    min-height:400px;
+    height:398px;
     padding:65px 40px;
+    overflow: hidden;
     width:100%;
     background-size: auto;
     background-position: center top;
@@ -262,14 +175,17 @@
       transition:all .3s;
       .product__item-title{
         opacity:0;
+        z-index:-1;
         transition:all .3s;
       }
       .product__details{
         transition:all 1s;
+        z-index: 5;
         opacity:1;
       }
       &::before{
         transition:all 1s;
+        z-index:-1;
         opacity:0;
       }
     }
@@ -285,6 +201,8 @@
     transition:all .3s;
   }
   &__details{
+    position:relative;
+    z-index:-1;
     opacity:0;
     transition:all .3s;
   }
@@ -303,12 +221,10 @@
     margin-bottom: 20px;
   }
   &__details-link{
-    background-color: $accent;
+    @extend %lk-btn;
     font-size: 14px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     padding:10px 25px;
-    border-radius:5px;
   }
 }
 // end product
@@ -345,11 +261,11 @@
       background-image: url('../images/clients/elektronik-logo-color.png') !important;
     }
   }
+  .slick-slider{
+    padding-left:110px;
+  }
 }
 // slick-clients
-.slick-slider{
-  padding-left:110px;
-}
 .slick-arrow{
   font-size: 0;
   line-height: 0;
@@ -382,40 +298,4 @@
 //end slick-clients
 // end clients
 
-// footer
-.footer{
-  padding:75px 0 70px;
-  &__logo-img{
-    margin: 0 auto 25px;
-  }
-  &__social{
-    text-align: center;;
-  }
-  &__social-icon{
-    display:inline;
-    margin:7px;
-  }
-  &__copy-text{
-    font-size: 14px;
-    line-height: 24px;
-    color:$line;
-  }
-  
-}
-.footer-menu{
-  margin-bottom: 13px;
-  &__list{
-    display:flex;
-    justify-content: space-around;
-  }
-  &__list-link{
-    text-transform: uppercase;
-    color:$line;
-    font-size: 14px;
-  }
-  &__list-link--checked{
-    color:$accent;
-  }
-}
-// end footer
 @import 'media';

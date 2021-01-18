@@ -1,0 +1,36 @@
+// footer
+.footer{
+  padding:75px 0 70px;
+  &__logo-img{
+    margin: 0 auto 25px;
+  }
+  &__social{
+    text-align: center;;
+  }
+  &__social-icon{
+    display:inline;
+    margin:7px;
+  }
+  &__copy-text{
+    font-size: 14px;
+    line-height: 24px;
+    color:$line;
+  }
+  
+}
+.footer-menu{
+  margin-bottom: 13px;
+  &__list{
+    display:flex;
+    justify-content: space-around;
+  }
+  &__list-link{
+    text-transform: uppercase;
+    color:$line;
+    font-size: 14px;
+  }
+  &__list-link--checked{
+    color:$accent;
+  }
+}
+// end footer

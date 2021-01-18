@@ -13,6 +13,12 @@ $line:#4d4d4d;
   border:none;
   cursor:pointer;
 }
+%lk-btn{
+  text-transform: uppercase;
+  background-color: $accent;
+  border-radius: 5px;
+  padding:10px 30px;
+}
 %roboto-400{
   font-family:'Roboto-Regular';
   font-weight:400;
