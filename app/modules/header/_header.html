@@ -6,25 +6,29 @@
       </a>
       <div class="phone">
         <span class="phone__text">Графік роботи: 09:00-18:00</span>
-        <a class="phone__number" href="tel:+30988690025">
-          (098) 86 900 25
-        </a>
-        <ul class="phone__list">
-          <li class="phone__list-item">
-            <a class="phone__list-link" href="tel:+30988690025">
+        <ul class="phone__item">
+          <li class="phone__item-num">
+            <a class="phone__number" href="tel:+30988690025">
               (098) 86 900 25
             </a>
           </li>
-          <li class="phone__list-item">
-            <a class="phone__list-link" href="tel:+30988690025">
-              (098) 86 900 25
-            </a>
-          </li>
-          <li class="phone__list-item">
-            <a class="phone__list-link" href="tel:+30988690025">
-              (098) 86 900 25
-            </a>
-          </li>
+            <ul class="phone__list">
+              <li class="phone__list-item">
+                <a class="phone__list-link" href="tel:+30988690025">
+                  (098) 86 900 25
+                </a>
+              </li>
+              <li class="phone__list-item">
+                <a class="phone__list-link" href="tel:+30988690025">
+                  (098) 86 900 25
+                </a>
+              </li>
+              <li class="phone__list-item">
+                <a class="phone__list-link" href="tel:+30988690025">
+                  (098) 86 900 25
+                </a>
+              </li>
+            </ul>
         </ul>
         <button class="menu__list-btn phone__btn"></button>
       </div>
@@ -52,6 +56,13 @@
         <button class="menu__list-btn language__btn"></button>
       </div>
       <nav class="menu">
+        <button class="menu__btn" type="button">
+          <svg class="ham ham2" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('active')">
+            <path class="line top" d="m 70,33 h -40 c -6.5909,0 -7.763966,-4.501509 -7.763966,-7.511428 0,-4.721448 3.376452,-9.583771 13.876919,-9.583771 14.786182,0 11.409257,14.896182 9.596449,21.970818 -1.812808,7.074636 -15.709402,12.124381 -15.709402,12.124381" />
+            <path class="line middle" d="m 30,50 h 40" />
+            <path class="line bottom" d="m 70,67 h -40 c -6.5909,0 -7.763966,4.501509 -7.763966,7.511428 0,4.721448 3.376452,9.583771 13.876919,9.583771 14.786182,0 11.409257,-14.896182 9.596449,-21.970818 -1.812808,-7.074636 -15.709402,-12.124381 -15.709402,-12.124381" />
+          </svg>
+        </button>
         <ul class="menu__list">
           <li class="menu__list-item">
             <a href="#" class="menu__list-link">
@@ -84,20 +95,23 @@
             <a href="#" class="menu__list-link">
               Підтримка
             </a>
-            <div class="menu-drop">
-              <a class="menu-drop__item-link" href="#">
-                Документація
-              </a>
-            
-              <a class="menu-drop__item-link" href="#">
-                Пітання та відповіді
-              </a>
-
-              <a class="menu-drop__item-link" href="#">
-                Відео та мультимедіа
-              </a>
-
-            </div>
+            <ul class="menu-drop">
+              <li class="menu-drop__item">
+                <a class="menu-drop__item-link" href="#">
+                  Документація
+                </a>
+              </li>
+              <li class="menu-drop__item">
+                <a class="menu-drop__item-link" href="#">
+                  Пітання та відповіді
+                </a>
+              </li>
+              <li class="menu-drop__item">
+                <a class="menu-drop__item-link" href="#">
+                  Відео та мультимедіа
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="menu__list-item">
             <a href="#" class="menu__list-link">
