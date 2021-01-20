@@ -54,9 +54,12 @@
     left:0;
     z-index:56;
   }
-  &__list-item{
+  &__list-item--drop{
     background-color: $bg;
-    padding:12px 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 14px 4px;
   }
   &__list-link{
     font-size: 20px;
@@ -335,7 +338,8 @@
   }
   .phone,
   .language{
-    margin-right: 25px;
+    margin:0;
+    margin-right:25px;
   }
 }
 @media(max-width:770px){
