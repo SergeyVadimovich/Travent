@@ -13,6 +13,19 @@
   }
 }
 .phone{
+  display:block;
+  position:relative;
+  padding-left: 25px;
+  &::before{
+    content:'';
+    position: absolute;
+    left:-10px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 28px; 
+    height: 30px;
+    background: url('../images/header-sprite.png') -10px -10px;
+  }
   &__text{
     display:block;
     color:$accent;
@@ -72,11 +85,9 @@
       top:50%;
       transform: translateY(-50%);
       left:0;
-      width: 30px;
-      height:15px;
-      background-image: url('../images/icons/UA-icon.png');
-      background-position: center center;
-      background-repeat: no-repeat;
+      width: 24px; 
+      height: 15px;
+      background: url('../images/header-sprite.png') -54px -60px;
     }
   }
   &__list{
@@ -93,18 +104,15 @@
       top:50%;
       transform: translateY(-50%);
       right:0;
-      width: 30px;
+      width: 24px; 
       height: 15px;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
     }
   }
   &__list-item--ru::after{
-    background-image: url('../images/icons/RU-icon.png');
+    background: url('../images/header-sprite.png') -58px -10px;
   }
   &__list-item--pl::after{
-    background-image: url('../images/icons/PL-icon.png');
+    background: url('../images/header-sprite.png') -10px -60px;
   }
   
   &__list-active{
@@ -178,19 +186,17 @@
       &::after{
         content:'';
         position:absolute;
-        width:11px;
-        height:7px;
         top:50%;
         right:-20px;
         transform: translateY(-50%);
-        transition:all .3s;
-        background-image: url('../images/icons/arrow-dw-white.png');
-        background-repeat: no-repeat;
-        background-position: center center;
+        width: 9px; 
+        height: 7px;
+        background: url('../images/header-sprite.png') -10px -95px;
       }
     }
     &:hover{
       .menu__list-link {
+        color:$accent;
         &::before{
           content:'';
           position:absolute;
@@ -200,6 +206,9 @@
           left:50%;
           transform: translateX(-50%);
         }
+        &::after{
+          background: url('../images/header-sprite.png') -102px -47px;
+        }
       }
       & .menu-drop{
         display:flex;
@@ -207,20 +216,14 @@
         flex-wrap:wrap;
         z-index:56;
       }
-      &::after{
-        transition:all .3s;
-        background-image: url('../images/icons/arrow-dw-red.png');
-      }
     }
   }
   &__list-btn{
     @extend %btn;
-    width: 11px;
-    height:11px;
     background-color: transparent;
-    background-image: url('../images/icons/arrow-dw-white.png');
-    background-position: center center;
-    background-repeat: no-repeat;
+    width: 9px; 
+    height: 7px;
+    background: url('../images/header-sprite.png') -10px -95px;
   }
   &__btn{
     border:none;
@@ -270,15 +273,15 @@
 .search-btn{
   @extend %btn;
   background-color: transparent;
-  width:25px;
-  height: 20px;
-  background-image: url(../images/icons/search-icon.png);
-  background-repeat: no-repeat;
-  background-position: center center;
+  width: 21px; 
+  height: 17px;
+  background: url('../images/header-sprite.png') -102px -10px;
   &__form{
     display:flex;
     align-items: center;
     position: absolute;
+    background-color: $bg;
+    padding-right:20px;
     right:20px;
     top:100%;
     opacity:0;
@@ -302,19 +305,22 @@
   }
   &__input-btn{
     @extend %btn;
-    height:45px;
-    width:45px;
     border-radius:5px;
-    background-color: $accent;
-    background-image: url('../../images/icons/search-icon.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto;
+    width: 21px; 
+    height: 17px;
+    background: url('../images/header-sprite.png') -102px -10px;
   }
 }
 
 // end header
 // adaptiv
+@media(max-width:1400px){
+  .menu{
+    &__list-item + .menu__list-item{
+      margin-left: 15px;
+    }
+  }
+}
 @media(max-width:1360px){
   .header{
     padding-top:20px;
@@ -344,6 +350,14 @@
       display:block;
       max-width:280px;
       width:100%;
+    }
+  }
+  .phone{
+    max-width:270px;
+    width:100%;
+    margin:10px auto ;
+    &::before{
+      left:0;
     }
   }
   .menu{
@@ -397,9 +411,6 @@
     &__btn{
       display:block;
     }
-  }
-  .phone{
-    margin:10px 0;
   }
   .language{
     display:inline-block;

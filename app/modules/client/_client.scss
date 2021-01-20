@@ -69,23 +69,26 @@
   top:50%;
   transform: translateY(-50%);
   left:-5%;
-  background-image: url('../images/icons/slider-arrow-prev.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 12px; 
+  height: 20px;
+  background: url('../images/sprites.png') -60px -50px;
 }
 .slick-next{
   position:absolute;
   right:-5%;
   top:50%;
   transform: translateY(-50%);
-  background-image: url('../images/icons/slider-arrow-next.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 12px; 
+  height: 20px;
+  background: url('../images/sprites.png') -60px -10px;
 }
 //end slick-client
 // end client
+
+.bg-slider_arrow_prev {
+  width: 12px; height: 20px;
+  background: url('css_sprites.png') -60px -50px;
+}
 
 // adaptiv
 @media(max-width:1500px){
