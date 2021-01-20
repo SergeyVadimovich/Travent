@@ -1,8 +1,8 @@
 // client
 .client{
-  padding:20px 0;
+  padding: 8px 0;
   &__inner{
-    padding:80px 0;
+    padding:67px 0 85px;
     position:relative;
     &::before,
     &::after{
@@ -67,17 +67,17 @@
 .slick-prev{
   position:absolute;
   top:50%;
-  transform: translateY(-50%);
-  left:-5%;
+  transform: translateY(-25%);
+  left:-6%;
   width: 12px; 
   height: 20px;
   background: url('../images/sprites.png') -60px -50px;
 }
 .slick-next{
   position:absolute;
-  right:-5%;
+  right:-6%;
   top:50%;
-  transform: translateY(-50%);
+  transform: translateY(-25%);
   width: 12px; 
   height: 20px;
   background: url('../images/sprites.png') -60px -10px;

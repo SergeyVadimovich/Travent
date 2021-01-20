@@ -1,6 +1,6 @@
 // info
 .info{
-  padding:40px 0 0;
+  padding:23px 0 0;
   &__inner{
     display:flex;
     justify-content:space-around;
@@ -22,16 +22,18 @@
   &__item{
     text-align: center;
     max-width:250px;
+    width:100%;
     margin-bottom: 70px;
   }
   &__item-icon{
-    margin: 0 auto;
+    margin: 0 auto 14px;
   }
   &__item-title{
     @extend %roboto-700;
     text-transform: uppercase;
     font-size: 25px;
-    line-height: 75px;
+    line-height: 38px;
+    margin-bottom: 5px;
   }
 }
 .bg-warranty_icon {
@@ -47,12 +49,12 @@
 .bg-support_icon {
   width: 68px; 
   height: 68px;
-  background: url('../images/info-sprite.png') -185px -10px;
+  background: url('../images/info-sprite.png') -186px -10px;
 }
 .bg-technology_icon {
   width: 69px; 
   height: 68px;
-  background: url('../images/info-sprite.png') -96px -10px;
+  background: url('../images/info-sprite.png') -95px -10px;
 }
 // end info
 // adaptiv

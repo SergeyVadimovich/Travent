@@ -21,12 +21,12 @@
   &__text-box{
     width:45%;
     margin-left:auto;
-    padding:5px;
+    padding:60px 25px 5px;
   }
   &__subtitle{
     text-transform: uppercase;
     font-size: 36px;
-    line-height: 60px;
+    line-height: 36px;
     letter-spacing: 2px;
   }
   &__title{
@@ -34,10 +34,9 @@
     font-size: 70px;
     line-height: 80px;
     letter-spacing: 1.6px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
   &__text{
-    letter-spacing: 1px;
     margin-bottom: 40px;
   }
   &__link-btn{
@@ -54,10 +53,10 @@
     line-height: 0;
     border:none;
     background-color: #333;
-    width:10px;
-    height:10px;
+    width:15px;
+    height:15px;
     border-radius:50%;
-    margin:5px
+    margin:6px
   }
   .slick-active{
     button{

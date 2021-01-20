@@ -15,11 +15,12 @@
 .phone{
   display:block;
   position:relative;
-  padding-left: 25px;
+  margin:0 auto;
+  padding-left: 42px;
   &::before{
     content:'';
     position: absolute;
-    left:-10px;
+    left:0;
     top:50%;
     transform: translateY(-50%);
     width: 28px; 
@@ -30,7 +31,7 @@
     display:block;
     color:$accent;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 14px;
   }
   &__item{
     display:inline-block;
@@ -39,8 +40,8 @@
   &__number{
     font-size: 22px;
     font-weight: bold;
-    line-height: 25px;
-    letter-spacing: 1.6px;
+    line-height: 22px;
+    padding:0 5px;
   }
   &__btn{
     height:25px;
@@ -71,6 +72,7 @@
   display:flex;
   align-items: center;
   position:relative;
+  margin: 0 25px 0 4px;
   @extend %pointer;
   &__item{
     font-size: 18px;
@@ -166,10 +168,10 @@
     color:$accent;
   }
   &__list-item + .menu__list-item{  
-    margin-left: 35px;
+    margin-left: 30px;
   }
   &__list-item{
-    padding:40px 0 45px;
+    padding:45px 0 45px;
   }
   &__list-link{
     @extend %roboto-400;

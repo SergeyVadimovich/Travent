@@ -1,6 +1,6 @@
 // product
 .product{
-  padding:50px 0;
+  padding:60px 0;
   position:relative;
   z-index:1;
   &::before{
@@ -31,8 +31,9 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  &_top{
+  &__top{
     margin-bottom: 54px;
+    padding: 0 160px;
   }
   &__inner{
     display: flex;
@@ -44,7 +45,7 @@
   &__item{
     max-width:320px;
     height:398px;
-    padding:65px 40px;
+    padding:60px 35px;
     overflow: hidden;
     width:100%;
     background-size: auto;
@@ -89,7 +90,7 @@
     position:absolute;
     top:50%;
     left:50%;
-    transform:translate(-50%, -50%);
+    transform:translate(-50%, -63%);
     transition:all .3s;
   }
   &__details{
@@ -99,7 +100,7 @@
     transition:all .3s;
   }
   &__details-icon{
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
   }
   &__details-title{
     &.title{
@@ -111,14 +112,14 @@
   }
   &__details-text{
     font-size: 14px;
-    line-height: 24px;
-    margin-bottom: 20px;
+    line-height: 26px;
+    margin-bottom: 14px;
   }
   &__details-link{
     @extend %lk-btn;
     font-size: 14px;
     letter-spacing: 1px;
-    padding:10px 25px;
+    padding:8px 15px;
   }
 }
 // end product
@@ -135,6 +136,9 @@
 }
 @media(max-width:1050px){
   .product{
+    &__top{
+      padding:0 100px;
+    } 
     &__item{
       padding:45px 20px;
     } 
@@ -153,6 +157,9 @@
     &__inner{
       padding:0 20px;
     }
+    &__top{
+      padding:0;
+    } 
     &__item{
       min-height:398px;
       height:auto;

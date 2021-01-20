@@ -1,6 +1,6 @@
 // footer
 .footer{
-  padding:75px 0 70px;
+  padding:68px 0 70px;
   background-color: $bg;
   &__logo-img{
     margin: 0 auto 25px;
@@ -10,7 +10,8 @@
   }
   &__social-icon{
     display:inline-block;
-    margin:7px;
+    margin:6px 5px;
+    padding:0 9px;
   }
   &__copy-text{
     font-size: 14px;
@@ -29,8 +30,8 @@
   background: url('../images/sprites.png') -10px -52px;
 }
 .footer-menu{
-  margin-bottom: 13px;
-  padding:0 170px;
+  margin-bottom: 7px;
+  padding:0 200px;
   &__list{
     display:flex;
     justify-content: space-around;
