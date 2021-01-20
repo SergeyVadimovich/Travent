@@ -13,14 +13,13 @@
   &::before{
     content:'';
     position:absolute;
-    top:6px;
-    bottom:6px;
-    left:6px;
-    right:6px;
-    transform:rotate(-90deg);
-    background-image: url('../images/icons/slider-arrow-next.png');
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-image: url('../images/icons/anchor-arrow.png');
     background-position: center center;
-    background-size: contain;
+    background-size: auto;
     background-repeat: no-repeat;
   }
 }

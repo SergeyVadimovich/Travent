@@ -1,4 +1,7 @@
 $(function(){
+
+    const offsetTop = 400;
+
   $('.slider__inner').slick({
     dots: true,
     arrows: false,
@@ -65,14 +68,22 @@ $(function(){
 		$('body,html').animate({ scrollTop: top }, 700);
   });
 
-  $(document).on('scroll', window, function () {
-    if ($(window).scrollTop()>400) 
-    {
+  $(document).ready(function () {
+      const showAnchor = $(window).scrollTop() > offsetTop;
+      handleVisibilityAnchor(showAnchor);
+  })
+
+  $(document).on('scroll', function () {
+      const showAnchor = $(window).scrollTop() > offsetTop;
+      handleVisibilityAnchor(showAnchor);
+  })
+
+function handleVisibilityAnchor(show) {
+    if (show) {
         $('.anchor').show();
-    }
-    else
-    {
+    } else {
         $('.anchor').hide();
     }
-    });
+}
+
 });
