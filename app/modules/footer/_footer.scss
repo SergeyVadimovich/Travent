@@ -19,15 +19,13 @@
     color:$line;
   }
 }
-.bg-youtube{
-  width: 30px; 
-  height: 22px;
+.bg-youtube_brands {
+  width: 30px; height: 22px;
   background: url('../images/sprites.png') -10px -10px;
 }
-.bg-facebook {
-  width: 22px; 
-  height: 23px;
-  background: url('../images/sprites.png') -10px -52px;
+.bg-facebook_square_brands {
+  width: 20px; height: 22px;
+  background: url('../images/sprites.png') -60px -10px;
 }
 .footer-menu{
   margin-bottom: 7px;

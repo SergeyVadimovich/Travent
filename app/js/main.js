@@ -17,7 +17,7 @@ $(function(){
     autoplay: false,
     responsive:[
       {
-          breakpoint:1051,
+          breakpoint:1101,
           settings:{
               slidesToShow: 3,
               slidesToScroll: 1,
@@ -61,13 +61,15 @@ $(function(){
     $('.menu__list').toggleClass('menu__list--active');
   });
 
+  // плавный скрол
   $('.menu a, .anchor').on('click', function (e) {
 		e.preventDefault();
 		var id  = $(this).attr('href'),
 			top = $(id).offset().top;
 		$('body,html').animate({ scrollTop: top }, 700);
   });
-
+  
+  //  кнопка наверх  
   $(document).ready(function () {
       const showAnchor = $(window).scrollTop() > offsetTop;
       handleVisibilityAnchor(showAnchor);
